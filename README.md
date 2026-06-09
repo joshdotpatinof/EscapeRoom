@@ -21,9 +21,17 @@ Welcome to **What's the Limit?**, an immersive escape room and puzzle game built
 
 ---
 
-## 🛠️ Getting Started / Playing the Game
+## 🎮 How to Play
 
-1. Clone this repository to your local machine.
+You can play **What's the Limit?** directly in your browser or download the project to explore the code!
+
+### Option 1: Play in Browser (Recommended)
+Play the game instantly online via Itch.io:
+👉 [Play What's the Limit? on Itch.io](YOUR_ITCH_IO_LINK_HERE)
+
+### Option 2: Play from Source (Godot Engine)
+If you want to run the project from the editor or view the source code:
+1. Clone or download this repository to your local machine.
 2. Download [Godot Engine version 4.2.2](https://godotengine.org/).
 3. Open the Godot Project Manager, click **Import**, and select the `project.godot` file inside this project folder.
 4. Run the project directly from the editor (Press `F5` or the Play button).
