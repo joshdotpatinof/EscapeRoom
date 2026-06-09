@@ -27,7 +27,7 @@ You can play **What's the Limit?** directly in your browser or download the proj
 
 ### Option 1: Play in Browser (Recommended)
 Play the game instantly online via Itch.io:
-👉 [Play What's the Limit? on Itch.io](YOUR_ITCH_IO_LINK_HERE)
+👉 [Play What's the Limit? on Itch.io](https://joshrylie.itch.io/whats-the-limit)
 
 ### Option 2: Play from Source (Godot Engine)
 If you want to run the project from the editor or view the source code:
