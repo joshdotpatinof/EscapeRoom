@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://bnvm8w4giveh6"]
+
+[ext_resource type="Texture2D" uid="uid://dva2uwwo1hsr1" path="res://assets/backpack_assets/default_backpack_bg.png" id="1_157kc"]
+[ext_resource type="Script" path="res://gba.gd" id="2_fvurb"]
+[ext_resource type="Texture2D" uid="uid://bp8e45mcbytle" path="res://assets/backpack_assets/gameboy_normal.png" id="3_a0lnu"]
+[ext_resource type="Texture2D" uid="uid://d1a1lalkjhsx7" path="res://assets/backpack_assets/gameboy_hovered.png" id="4_6gsha"]
+[ext_resource type="PackedScene" uid="uid://2yfbb7gudthf" path="res://back_button.tscn" id="5_gnew5"]
+
+[node name="second_compartment" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_157kc")
+
+[node name="gba" type="Area2D" parent="."]
+script = ExtResource("2_fvurb")
+
+[node name="gba_normal" type="Sprite2D" parent="gba"]
+position = Vector2(727, 445)
+texture = ExtResource("3_a0lnu")
+
+[node name="gba_hovered" type="Sprite2D" parent="gba"]
+position = Vector2(727, 445)
+texture = ExtResource("4_6gsha")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="gba"]
+visible = false
+position = Vector2(727, 445)
+polygon = PackedVector2Array(301, -53, 302.8, -36, 520, -36, 520, -33, 521.8, -16, 538.8, -16, 542, -12.8, 542, 169, 539.2, 169, 522, 170.8, 522, 187.8, 518.8, 191, -499.8, 191, -501.8, 171, -538.8, 171, -542, 167.8, -542, -14, -539.1, -14, -502, -15.9, -502, -32.8, -498.8, -36, 155.2, -36, 157, -53.2, 157, -56, 301, -56)
+
+[node name="back_button" parent="." instance=ExtResource("5_gnew5")]

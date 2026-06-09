@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dyxw4urcoag4m"]
+
+[ext_resource type="Texture2D" uid="uid://b11e0hpcde414" path="res://assets/test_assets/test_view.png" id="1_gaod6"]
+[ext_resource type="PackedScene" uid="uid://2yfbb7gudthf" path="res://back_button.tscn" id="2_upmfa"]
+
+[node name="test_view" type="Node2D"]
+
+[node name="test_view" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.599961, 0.666218)
+texture = ExtResource("1_gaod6")
+
+[node name="back_button" parent="." instance=ExtResource("2_upmfa")]
+position = Vector2(1231, 4)

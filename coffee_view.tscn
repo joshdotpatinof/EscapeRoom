@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bju46y1yj5v0p"]
+
+[ext_resource type="Texture2D" uid="uid://dyehnwtmulovs" path="res://assets/coffee_assets/coffee_view.png" id="1_bqf50"]
+[ext_resource type="PackedScene" uid="uid://2yfbb7gudthf" path="res://back_button.tscn" id="2_f8nbk"]
+
+[node name="coffee_view" type="Node2D"]
+
+[node name="coffee_view" type="TextureRect" parent="."]
+offset_left = -67.0
+offset_right = 1373.0
+offset_bottom = 810.0
+scale = Vector2(1.07705, 1.11108)
+texture = ExtResource("1_bqf50")
+
+[node name="back_button" parent="." instance=ExtResource("2_f8nbk")]

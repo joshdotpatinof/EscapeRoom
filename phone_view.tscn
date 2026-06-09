@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://b7p3b0pfb0mgv"]
+
+[ext_resource type="Texture2D" uid="uid://ddvfy0ri5ilit" path="res://assets/backpack_assets/phone_bg.png" id="1_bk47n"]
+[ext_resource type="Texture2D" uid="uid://blugns8qs6ge3" path="res://assets/backpack_assets/phone_hovered.png" id="2_13ebm"]
+[ext_resource type="Script" path="res://phone_icon.gd" id="2_t37o5"]
+[ext_resource type="Texture2D" uid="uid://dwy7ly57ogfkj" path="res://assets/backpack_assets/phone_normal.png" id="3_i4le1"]
+[ext_resource type="PackedScene" uid="uid://2yfbb7gudthf" path="res://back_button.tscn" id="5_6y51c"]
+
+[node name="phone_view" type="Node2D"]
+
+[node name="phone_bg" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_bk47n")
+
+[node name="phone_icon" type="Area2D" parent="."]
+script = ExtResource("2_t37o5")
+
+[node name="phone_normal" type="Sprite2D" parent="phone_icon"]
+position = Vector2(723, 445)
+texture = ExtResource("2_13ebm")
+
+[node name="phone_hovered" type="Sprite2D" parent="phone_icon"]
+visible = false
+position = Vector2(723, 445)
+texture = ExtResource("3_i4le1")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="phone_icon"]
+visible = false
+position = Vector2(723, 445)
+polygon = PackedVector2Array(216, -418, 217.8, -400, 259, -400, 259, -397, 260.8, -380, 278.8, -380, 282, -376.8, 282, -249, 299.8, -249, 303, -245.8, 303, -180.2, 282, -178.2, 282, -164, 300.9, -164, 303.1, -93, 300.2, -93, 282, -91.2, 282, 375, 279.2, 375, 261, 376.8, 261, 398.8, 257.8, 402, 217.8, 402, 215.8, 423, -217, 423, -217, 420, -218.8, 402, -258, 402, -258, 399, -259.9, 377, -279.8, 377, -283, 373.8, -283, -114.2, -305, -116.2, -305, -247, -302.2, -247, -283, -248.8, -283, -378, -280.2, -378, -260, -379.8, -260, -396.8, -256.8, -400, -219, -400, -219, -418.2, -217, -419.2, -217, -421, 216, -421)
+
+[node name="back_button" parent="." instance=ExtResource("5_6y51c")]

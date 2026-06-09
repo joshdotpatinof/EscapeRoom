@@ -1,0 +1,126 @@
+[gd_scene load_steps=19 format=3 uid="uid://h2q4gxsnxg84"]
+
+[ext_resource type="Texture2D" uid="uid://cbhiutmdslem3" path="res://assets/wall.png" id="1_4387l"]
+[ext_resource type="Texture2D" uid="uid://m5vmcwqb8bxk" path="res://assets/chairs.png" id="2_gseqh"]
+[ext_resource type="Texture2D" uid="uid://cbxsrn0alyqki" path="res://assets/painting.png" id="2_j0u7w"]
+[ext_resource type="Texture2D" uid="uid://cgmkdpb7tjxcr" path="res://assets/game_poster.png" id="2_q5bbl"]
+[ext_resource type="Texture2D" uid="uid://bkjnd5mr8a2w8" path="res://assets/table.png" id="3_1sco4"]
+[ext_resource type="Texture2D" uid="uid://ek4jjehxrq06" path="res://assets/sling.png" id="3_4d6fq"]
+[ext_resource type="Texture2D" uid="uid://c8bsdlgcedrcg" path="res://assets/coffee_post.png" id="4_0je00"]
+[ext_resource type="Texture2D" uid="uid://cbu3hwj3c2kpm" path="res://assets/backpack.png" id="4_gnbhd"]
+[ext_resource type="Script" path="res://sling area.gd" id="4_x6jcu"]
+[ext_resource type="Texture2D" uid="uid://bawdl0rw5q5wa" path="res://assets/assets_hovered/sling_h.png" id="5_n6ucr"]
+[ext_resource type="Script" path="res://backpack area.gd" id="6_e3ert"]
+[ext_resource type="Texture2D" uid="uid://7v0vxuxetk5o" path="res://assets/test.png" id="6_xjooc"]
+[ext_resource type="Texture2D" uid="uid://c48cx7h7mnvne" path="res://assets/assets_hovered/backpack_h.png" id="7_vxtvx"]
+[ext_resource type="Texture2D" uid="uid://5w05v3fryt14" path="res://assets/coffee.png" id="7_yy0qg"]
+[ext_resource type="Texture2D" uid="uid://cc5f7bxujot6j" path="res://assets/assets_hovered/test_h.png" id="10_4ty04"]
+[ext_resource type="Script" path="res://test area.gd" id="11_1tttj"]
+[ext_resource type="Texture2D" uid="uid://cqyp0oreejkpd" path="res://assets/assets_hovered/coffee_h.png" id="12_ub37g"]
+[ext_resource type="Script" path="res://coffee area.gd" id="14_qo52x"]
+
+[node name="main" type="Node2D"]
+
+[node name="wall" type="TextureRect" parent="."]
+scale = Vector2(1, 1.10973)
+texture = ExtResource("1_4387l")
+metadata/_edit_use_anchors_ = true
+
+[node name="painting" type="TextureRect" parent="."]
+offset_left = 481.0
+offset_top = -3.0
+offset_right = 1441.0
+offset_bottom = 537.0
+texture = ExtResource("2_j0u7w")
+
+[node name="game_poster" type="TextureRect" parent="."]
+offset_left = -280.0
+offset_top = -65.0
+offset_right = 680.0
+offset_bottom = 475.0
+scale = Vector2(0.966619, 0.955333)
+texture = ExtResource("2_q5bbl")
+
+[node name="coffee_post" type="TextureRect" parent="."]
+offset_left = 193.0
+offset_top = 44.0
+offset_right = 1153.0
+offset_bottom = 584.0
+scale = Vector2(0.743935, 0.745705)
+texture = ExtResource("4_0je00")
+
+[node name="chairs" type="TextureRect" parent="."]
+scale = Vector2(1, 1.11054)
+texture = ExtResource("2_gseqh")
+metadata/_edit_use_anchors_ = true
+
+[node name="sling area" type="Area2D" parent="."]
+script = ExtResource("4_x6jcu")
+
+[node name="sling" type="Sprite2D" parent="sling area"]
+position = Vector2(721, 458)
+texture = ExtResource("3_4d6fq")
+
+[node name="sling_hovered" type="Sprite2D" parent="sling area"]
+position = Vector2(721, 458)
+texture = ExtResource("5_n6ucr")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="sling area"]
+visible = false
+position = Vector2(721, 458)
+polygon = PackedVector2Array(-376, -91, -374.5, -85, -368.2, -85, -365, -81.8, -365, -16.4, -374, -14.4, -374, 10.6, -383, 12.6, -383, 38, -385.9, 38, -392, 39.5, -392, 65, -394.9, 65, -401, 66.5, -401, 92, -403.9, 92, -410, 93.5, -410, 110, -412.9, 110, -419, 111.5, -419, 136.6, -428, 138.6, -428, 163.6, -437, 165.6, -437, 190.6, -446, 192.6, -446, 209, -448.9, 209, -455, 210.5, -455, 235.6, -464, 237.6, -464, 254, -466.9, 254, -473, 255.5, -473, 261.8, -476.2, 265, -482, 265, -482, 270.8, -485.2, 274, -524, 274, -524, 271, -526.2, 250, -523.1, 250, -517, 248.5, -517, 232, -514.1, 232, -508, 230.5, -508, 205.4, -499, 203.4, -499, 178.4, -490, 176.4, -490, 151.4, -481, 149.4, -481, 124.4, -472, 122.4, -472, 97.4, -463, 95.4, -463, 70.4, -454, 68.4, -454, 43.4, -445, 41.4, -445, 16.4, -436, 14.4, -436, -10.6, -427, -12.6, -427, -37.6, -418, -39.6, -418, -64.6, -409, -66.6, -409, -68.4, -418, -70.4, -418, -83, -415.1, -83, -409, -84.5, -409, -91.2, -407, -92.2, -407, -94, -376, -94)
+
+[node name="backpack area" type="Area2D" parent="."]
+script = ExtResource("6_e3ert")
+
+[node name="backpack" type="Sprite2D" parent="backpack area"]
+position = Vector2(706, 461)
+texture = ExtResource("4_gnbhd")
+
+[node name="backpack_hovered" type="Sprite2D" parent="backpack area"]
+position = Vector2(706, 461)
+texture = ExtResource("7_vxtvx")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="backpack area"]
+visible = false
+position = Vector2(706, 461)
+polygon = PackedVector2Array(380, -190, 381.5, -184, 387.8, -184, 391, -180.8, 391, -166, 470, -166, 470, -163, 471.5, -157, 488, -157, 488, -154, 489.5, -148, 495.8, -148, 499, -144.8, 499, -139, 504.8, -139, 508, -135.8, 508, -130, 513.8, -130, 517, -126.8, 517, -121, 522.8, -121, 526, -117.8, 526, -84.6, 535, -82.6, 535, -58, 540.8, -58, 544, -54.8, 544, -22, 549.8, -22, 553, -18.8, 553, 23, 559.9, 23, 561.9, 50, 568.8, 50, 570.8, 68, 576.8, 68, 580, 71.2, 580, 95, 586.7, 95, 589.4, 110, 586.1, 110, 580, 111.5, 580, 162.8, 576.8, 166, 134.2, 166, 131, 162.8, 131, 115.4, 140, 113.4, 140, 70.4, 149, 68.4, 149, 16.4, 158, 14.4, 158, -28.6, 167, -30.6, 167, -73.6, 176, -75.6, 176, -101, 178.9, -101, 185, -102.5, 185, -108.8, 188.2, -112, 194, -112, 194, -117.8, 197.2, -121, 203, -121, 203, -126.8, 206.2, -130, 221, -130, 221, -135.8, 224.2, -139, 257, -139, 257, -145.6, 266, -147.6, 266, -153.8, 269.2, -157, 275, -157, 275, -162.8, 278.2, -166, 284, -166, 284, -171.8, 287.2, -175, 307.6, -175, 309.6, -166, 311, -166, 311, -181.6, 320, -183.6, 320, -190.2, 322, -191.2, 322, -193, 380, -193)
+
+[node name="table" type="TextureRect" parent="."]
+scale = Vector2(1, 1.11055)
+texture = ExtResource("3_1sco4")
+
+[node name="test area" type="Area2D" parent="."]
+script = ExtResource("11_1tttj")
+
+[node name="test" type="Sprite2D" parent="test area"]
+position = Vector2(718, 492)
+texture = ExtResource("6_xjooc")
+
+[node name="test_hovered" type="Sprite2D" parent="test area"]
+position = Vector2(718, 492)
+texture = ExtResource("10_4ty04")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="test area"]
+visible = false
+position = Vector2(718, 492)
+polygon = PackedVector2Array(-43, 224, -41.5, 230, -35.2, 230, -32, 233.2, -32, 239, -26.2, 239, -23, 242.2, -23, 248, -17.2, 248, -14, 251.2, -14, 257, -8.20001, 257, -5, 260.2, -5, 266, 0.799988, 266, 4, 269.2, 4, 284, 11, 284, 11, 287, 12.5, 293, 18.8, 293, 22, 296.2, 22, 302, 27.8, 302, 31, 305.2, 31, 311, 36.8, 311, 40, 314.2, 40, 320, 45.8, 320, 49, 323.2, 49, 329, 54.8, 329, 58, 332.2, 58, 338, 63.8, 338, 67, 341.2, 67, 347, 72.8, 347, 76, 350.2, 76, 356, 81.8, 356, 85, 359.2, 85, 365, 90.8, 365, 94, 368.2, 94, 374, 99.8, 374, 103, 377.2, 103, 392.4, 112, 394.4, 112, 405, -328, 405, -328, 391, -334.6, 391, -336.6, 382, -342.8, 382, -346, 378.8, -346, 364, -352.6, 364, -354.6, 355, -360.8, 355, -364, 351.8, -364, 346, -369.8, 346, -373, 342.8, -373, 328, -379.6, 328, -381.6, 319, -387.8, 319, -391, 315.8, -391, 300.6, -400, 298.6, -400, 286, -397.1, 286, -364, 284.1, -364, 278.2, -360.8, 275, -310, 275, -310, 269.2, -306.8, 266, -265, 266, -265, 260.2, -261.8, 257, -211, 257, -211, 251.2, -207.8, 248, -157, 248, -157, 241.1, -121, 239.1, -121, 233.2, -117.8, 230, -76, 230, -76, 223.8, -74, 222.8, -74, 221, -43, 221)
+
+[node name="coffee area" type="Area2D" parent="."]
+script = ExtResource("14_qo52x")
+
+[node name="coffee" type="Sprite2D" parent="coffee area"]
+position = Vector2(939, 554)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("7_yy0qg")
+
+[node name="coffee_hovered" type="Sprite2D" parent="coffee area"]
+position = Vector2(939, 554)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("12_ub37g")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="coffee area"]
+visible = false
+position = Vector2(939, 554)
+scale = Vector2(0.7, 0.7)
+polygon = PackedVector2Array(515, 98, 516.5, 104, 542, 104, 542, 107, 543.5, 113, 549.8, 113, 553, 116.2, 553, 122, 558.8, 122, 562, 125.2, 562, 131, 567.8, 131, 571, 134.2, 571, 140, 576.8, 140, 580, 143.2, 580, 149, 623, 149, 623, 152, 624.5, 158, 630.8, 158, 634, 161.2, 634, 167, 639.8, 167, 643, 170.2, 643, 176, 648.8, 176, 652, 179.2, 652, 185, 657.8, 185, 661, 188.2, 661, 227, 658.1, 227, 652, 228.5, 652, 234.8, 648.8, 238, 634, 238, 634, 243.8, 630.8, 247, 616, 247, 616, 252.8, 612.8, 256, 571, 256, 571, 257, 578, 257, 578, 260, 579.5, 266, 585.8, 266, 589, 269.2, 589, 275, 594.8, 275, 598, 278.2, 598, 284, 603.8, 284, 607, 287.2, 607, 326, 604.1, 326, 598, 327.5, 598, 333.8, 594.8, 337, 589, 337, 589, 342.8, 585.8, 346, 580, 346, 580, 351.8, 576.8, 355, 571, 355, 571, 360.8, 567.8, 364, 543.6, 364, 541.6, 373, 508, 373, 508, 378.8, 504.8, 382, 403, 382, 403, 379, 401.5, 373, 367.4, 373, 365.4, 364, 340, 364, 340, 361, 338.5, 355, 332.2, 355, 329, 351.8, 329, 346, 323.2, 346, 320, 342.8, 320, 337, 314.2, 337, 311, 333.8, 311, 328, 305.2, 328, 302, 324.8, 302, 286.4, 311, 284.4, 311, 278.2, 314.2, 275, 320, 275, 320, 269.2, 323.2, 266, 329, 266, 329, 260.2, 332.2, 257, 338, 257, 338, 251.2, 341.2, 248, 347, 248, 347, 238, 340, 238, 340, 235, 338.5, 229, 332.2, 229, 329, 225.8, 329, 160, 331.9, 160, 338, 158.5, 338, 142.4, 347, 140.4, 347, 134.2, 350.2, 131, 356, 131, 356, 125.2, 359.2, 122, 365, 122, 365, 116.2, 368.2, 113, 383.4, 113, 385.4, 104, 410.5, 104, 412, 98, 412, 95, 515, 95)

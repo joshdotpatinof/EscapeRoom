@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dupxkqe1txvve"]
+
+[ext_resource type="Texture2D" uid="uid://ch0ej5hi6ova4" path="res://assets/sling_assets/sling_view.png" id="1_nt5gm"]
+[ext_resource type="PackedScene" uid="uid://2yfbb7gudthf" path="res://back_button.tscn" id="2_bqe0p"]
+
+[node name="sling_view" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1440.0
+offset_bottom = 900.0
+texture = ExtResource("1_nt5gm")
+metadata/_edit_use_anchors_ = true
+
+[node name="back_button" parent="." instance=ExtResource("2_bqe0p")]

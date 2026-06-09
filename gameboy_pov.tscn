@@ -1,0 +1,99 @@
+[gd_scene load_steps=9 format=3 uid="uid://dgsqlaoc75nro"]
+
+[ext_resource type="Script" path="res://gameboy_pov.gd" id="1_bqtl0"]
+[ext_resource type="Texture2D" uid="uid://doupboy0rhnv0" path="res://assets/backpack_assets/gameboy_backdrop.png" id="1_mmbjt"]
+[ext_resource type="Texture2D" uid="uid://buqfjheqkopjd" path="res://assets/backpack_assets/arrow.png" id="2_nk5ep"]
+[ext_resource type="PackedScene" uid="uid://2yfbb7gudthf" path="res://back_button.tscn" id="4_p06ue"]
+
+[sub_resource type="SystemFont" id="SystemFont_wmxsx"]
+font_names = PackedStringArray("MS Gothic")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qwhqd"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="Theme" id="Theme_l648t"]
+Label/colors/font_color = Color(0.152941, 0.266667, 0, 1)
+Label/colors/font_outline_color = Color(0.0108715, 0.0332568, 0.00997696, 1)
+Label/font_sizes/font_size = 50
+Label/fonts/font = SubResource("SystemFont_wmxsx")
+Label/styles/normal = SubResource("StyleBoxFlat_qwhqd")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s3voo"]
+size = Vector2(269, 301)
+
+[node name="gameboy_pov" type="Node2D"]
+script = ExtResource("1_bqtl0")
+
+[node name="gameboy_bg" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.999841, 1.11183)
+texture = ExtResource("1_mmbjt")
+
+[node name="Display" type="Label" parent="."]
+offset_left = 417.0
+offset_top = 152.0
+offset_right = 1335.0
+offset_bottom = 298.0
+theme = SubResource("Theme_l648t")
+text = "Align arrows to unlock the code."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ARROWS" type="HBoxContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="arrow1" type="Area2D" parent="ARROWS"]
+position = Vector2(252, 518)
+
+[node name="ar1" type="Sprite2D" parent="ARROWS/arrow1"]
+position = Vector2(8, -8)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("2_nk5ep")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ARROWS/arrow1"]
+position = Vector2(1.5, 1.5)
+shape = SubResource("RectangleShape2D_s3voo")
+
+[node name="arrow2" type="Area2D" parent="ARROWS"]
+position = Vector2(560, 520)
+
+[node name="ar2" type="Sprite2D" parent="ARROWS/arrow2"]
+position = Vector2(8, -8)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("2_nk5ep")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ARROWS/arrow2"]
+position = Vector2(1.5, 1.5)
+shape = SubResource("RectangleShape2D_s3voo")
+
+[node name="arrow3" type="Area2D" parent="ARROWS"]
+position = Vector2(888, 520)
+
+[node name="ar3" type="Sprite2D" parent="ARROWS/arrow3"]
+position = Vector2(8, -8)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("2_nk5ep")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ARROWS/arrow3"]
+position = Vector2(1.5, 1.5)
+shape = SubResource("RectangleShape2D_s3voo")
+
+[node name="arrow4" type="Area2D" parent="ARROWS"]
+position = Vector2(1192, 520)
+
+[node name="ar4" type="Sprite2D" parent="ARROWS/arrow4"]
+position = Vector2(8, -8)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("2_nk5ep")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ARROWS/arrow4"]
+position = Vector2(1.5, 1.5)
+shape = SubResource("RectangleShape2D_s3voo")
+
+[node name="back_button" parent="." instance=ExtResource("4_p06ue")]

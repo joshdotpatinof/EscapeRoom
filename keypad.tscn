@@ -1,0 +1,132 @@
+[gd_scene load_steps=6 format=3 uid="uid://b6upw2bllr54v"]
+
+[ext_resource type="Script" path="res://Keypad.gd" id="1_bjpep"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5ov1n"]
+bg_color = Color(0.69592, 0.45333, 0.140808, 1)
+border_width_left = 2
+border_width_bottom = 2
+border_color = Color(0.419813, 0.238978, 0.0249799, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mhog0"]
+resource_local_to_scene = true
+bg_color = Color(0.91837, 0.631417, 0.290951, 1)
+border_width_left = 2
+border_width_bottom = 2
+border_color = Color(0.438875, 0.252551, 0.0261798, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_448q4"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.0846899, 0.0846899, 0.0846899, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="Theme" id="Theme_yredo"]
+Button/font_sizes/font_size = 40
+Button/styles/hover = SubResource("StyleBoxFlat_5ov1n")
+Button/styles/normal = SubResource("StyleBoxFlat_mhog0")
+HBoxContainer/constants/separation = 10
+Label/colors/font_color = Color(0, 0, 0, 1)
+Label/font_sizes/font_size = 40
+Label/fonts/font = null
+Label/styles/normal = SubResource("StyleBoxFlat_448q4")
+
+[node name="keypad" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Keypad" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 108.0
+offset_bottom = 375.0
+scale = Vector2(1.5, 1.5)
+theme = SubResource("Theme_yredo")
+theme_override_constants/separation = 10
+alignment = 1
+script = ExtResource("1_bjpep")
+
+[node name="CodeDisplay" type="Label" parent="Keypad"]
+layout_mode = 2
+horizontal_alignment = 1
+
+[node name="Row1" type="HBoxContainer" parent="Keypad"]
+layout_mode = 2
+alignment = 1
+
+[node name="btn1" type="Button" parent="Keypad/Row1"]
+layout_mode = 2
+text = "1"
+
+[node name="btn2" type="Button" parent="Keypad/Row1"]
+layout_mode = 2
+text = "2"
+
+[node name="btn3" type="Button" parent="Keypad/Row1"]
+layout_mode = 2
+text = "3"
+
+[node name="Row2" type="HBoxContainer" parent="Keypad"]
+layout_mode = 2
+alignment = 1
+
+[node name="btn4" type="Button" parent="Keypad/Row2"]
+layout_mode = 2
+text = "4"
+
+[node name="btn5" type="Button" parent="Keypad/Row2"]
+layout_mode = 2
+text = "5"
+
+[node name="btn6" type="Button" parent="Keypad/Row2"]
+layout_mode = 2
+text = "6"
+
+[node name="Row3" type="HBoxContainer" parent="Keypad"]
+layout_mode = 2
+alignment = 1
+
+[node name="btn7" type="Button" parent="Keypad/Row3"]
+layout_mode = 2
+text = "7"
+
+[node name="btn8" type="Button" parent="Keypad/Row3"]
+layout_mode = 2
+text = "8"
+
+[node name="btn9" type="Button" parent="Keypad/Row3"]
+layout_mode = 2
+text = "9"
+
+[node name="Row4" type="HBoxContainer" parent="Keypad"]
+layout_mode = 2
+alignment = 1
+
+[node name="btnX" type="Button" parent="Keypad/Row4"]
+layout_mode = 2
+text = "X"
+
+[node name="btn0" type="Button" parent="Keypad/Row4"]
+layout_mode = 2
+text = "0"
+
+[node name="btnenter" type="Button" parent="Keypad/Row4"]
+layout_mode = 2
+text = "<"

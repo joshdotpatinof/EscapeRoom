@@ -1,0 +1,76 @@
+[gd_scene load_steps=5 format=3 uid="uid://cwr4fs5fcsar5"]
+
+[ext_resource type="Texture2D" uid="uid://cbhiutmdslem3" path="res://assets/wall.png" id="1_c0lgu"]
+
+[sub_resource type="SystemFont" id="SystemFont_vkqvw"]
+font_names = PackedStringArray("Bernard MT")
+
+[sub_resource type="Theme" id="Theme_3gjd2"]
+default_font = SubResource("SystemFont_vkqvw")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1nvbs"]
+bg_color = Color(0, 0, 0, 0.905882)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="escape" type="Node2D"]
+
+[node name="bg" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.999393, 1.10994)
+texture = ExtResource("1_c0lgu")
+
+[node name="finisher" type="CanvasLayer" parent="."]
+
+[node name="taskprompt" type="Control" parent="finisher"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="messagepanel" type="Panel" parent="finisher/taskprompt"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 48.0
+offset_top = 24.0
+offset_right = 1329.0
+offset_bottom = 822.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_3gjd2")
+theme_override_styles/panel = SubResource("StyleBoxFlat_1nvbs")
+
+[node name="task" type="Label" parent="finisher/taskprompt/messagepanel"]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 72.0
+offset_right = 1173.0
+offset_bottom = 251.0
+theme_override_font_sizes/font_size = 100
+text = "CONGRATULATIONS!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Question" type="Label" parent="finisher/taskprompt/messagepanel"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 296.0
+offset_right = 1332.0
+offset_bottom = 765.0
+theme_override_font_sizes/font_size = 60
+text = "Now solve this...
+
+The integral of sqrt(tan x)
+with respect to x  :)"
+horizontal_alignment = 1
+vertical_alignment = 1

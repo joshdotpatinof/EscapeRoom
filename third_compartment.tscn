@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://yh5myf2ba03l"]
+
+[ext_resource type="Texture2D" uid="uid://b2ejei633ogeq" path="res://assets/backpack_assets/code.png" id="1_q3mcf"]
+[ext_resource type="PackedScene" uid="uid://2yfbb7gudthf" path="res://back_button.tscn" id="2_uis50"]
+
+[node name="third_compartment" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_q3mcf")
+
+[node name="back_button" parent="." instance=ExtResource("2_uis50")]

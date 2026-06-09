@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://bwke8ds5didiw"]
+
+[ext_resource type="Texture2D" uid="uid://ddvfy0ri5ilit" path="res://assets/backpack_assets/phone_bg.png" id="1_80q17"]
+[ext_resource type="Texture2D" uid="uid://bhdjpfaijjvhg" path="res://assets/backpack_assets/phone_unlocked.png" id="2_px2ak"]
+[ext_resource type="PackedScene" uid="uid://hesk038m7xmn" path="res://home_btn.tscn" id="3_0jtxs"]
+
+[sub_resource type="GDScript" id="GDScript_kvv4q"]
+script/source = "extends Node2D
+
+@onready var sfx = preload(\"res://audio/mixkit-game-click-1114.wav\")
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	AudioPlayer.play_fx(sfx)
+	print( $\"/root\".has_node(\"Global\") )
+	print(Engine.has_singleton(\"Global\"))
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+"
+
+[node name="test" type="Node2D"]
+script = SubResource("GDScript_kvv4q")
+
+[node name="phone_bg" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_80q17")
+
+[node name="phone_unlocked" type="TextureRect" parent="."]
+offset_left = -14.0
+offset_top = 1.0
+offset_right = 1426.0
+offset_bottom = 901.0
+scale = Vector2(0.998, 1.012)
+texture = ExtResource("2_px2ak")
+
+[node name="home_btn" parent="." instance=ExtResource("3_0jtxs")]

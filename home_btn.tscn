@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://hesk038m7xmn"]
+
+[ext_resource type="Texture2D" uid="uid://bn7d4hscd8lol" path="res://assets/home_normal.png" id="1_bao2j"]
+[ext_resource type="Script" path="res://home_btn.gd" id="1_mmonw"]
+[ext_resource type="Texture2D" uid="uid://beprc532njqep" path="res://assets/home_hovered.png" id="2_d4uhl"]
+
+[node name="home_btn" type="Node2D"]
+
+[node name="btn" type="Area2D" parent="."]
+script = ExtResource("1_mmonw")
+
+[node name="home_normal" type="Sprite2D" parent="btn"]
+position = Vector2(102, 810)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_bao2j")
+
+[node name="home_hovered" type="Sprite2D" parent="btn"]
+position = Vector2(102, 810)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_d4uhl")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="btn"]
+visible = false
+position = Vector2(102, 810)
+scale = Vector2(0.25, 0.25)
+polygon = PackedVector2Array(62, -226, 63.8, -214, 107, -214, 107, -211, 108.8, -199, 120.8, -199, 124, -195.8, 124, -184, 151.8, -184, 153.8, -169, 165.8, -169, 169, -165.8, 169, -154, 180.8, -154, 184, -150.8, 184, -124, 197, -124, 197, -121, 198.8, -109, 210.8, -109, 214, -105.8, 214, -63.8, 229, -61.8, 229, 62, 226.3, 62, 214, 63.8, 214, 107, 211.3, 107, 199, 108.8, 199, 120.8, 195.8, 124, 184, 124, 184, 152, 181.3, 152, 169, 153.8, 169, 165.8, 165.8, 169, 154, 169, 154, 180.8, 150.8, 184, 124, 184, 124, 196.8, 109, 198.8, 109, 210.8, 105.8, 214, 64, 214, 64, 225.8, 60.8, 229, -61.8, 229, -63.8, 214, -106.8, 214, -108.8, 199, -120.8, 199, -124, 195.8, -124, 184, -151.8, 184, -153.8, 169, -165.8, 169, -169, 165.8, -169, 154, -180.8, 154, -184, 150.8, -184, 124, -197, 124, -197, 121, -198.8, 109, -210.8, 109, -214, 105.8, -214, 63.8, -229, 61.8, -229, -61.8, -214, -63.8, -214, -107, -211.3, -107, -199, -108.8, -199, -120.8, -195.8, -124, -184, -124, -184, -151.8, -169, -153.8, -169, -165.8, -165.8, -169, -154, -169, -154, -180.8, -150.8, -184, -124, -184, -124, -197, -121.3, -197, -109, -198.8, -109, -210.8, -105.8, -214, -63.8, -214, -62, -226.3, -62, -229, 62, -229)

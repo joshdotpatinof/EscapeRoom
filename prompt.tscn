@@ -1,0 +1,123 @@
+[gd_scene load_steps=10 format=3 uid="uid://cf61cmnknlwnt"]
+
+[ext_resource type="Script" path="res://closebtn.gd" id="1_mqutt"]
+[ext_resource type="Texture2D" uid="uid://cbhiutmdslem3" path="res://assets/wall.png" id="1_pcupo"]
+
+[sub_resource type="SystemFont" id="SystemFont_6brfo"]
+font_names = PackedStringArray("Bernard MT")
+
+[sub_resource type="Theme" id="Theme_8k1cl"]
+default_font = SubResource("SystemFont_6brfo")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jr4q0"]
+bg_color = Color(0, 0, 0, 0.905882)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="SystemFont" id="SystemFont_3inlk"]
+font_names = PackedStringArray("Impact")
+
+[sub_resource type="Theme" id="Theme_2aejp"]
+default_font = SubResource("SystemFont_3inlk")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1x68m"]
+bg_color = Color(0.705882, 0, 0.0784314, 0.321569)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8jp2r"]
+bg_color = Color(0.705882, 0, 0.0784314, 0.321569)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.988235, 0.764706, 0.596078, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[node name="prompt" type="Node2D"]
+
+[node name="wall" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 1441.0
+offset_bottom = 811.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.998715, 1.11033)
+texture = ExtResource("1_pcupo")
+metadata/_edit_use_anchors_ = true
+
+[node name="prompt" type="CanvasLayer" parent="."]
+
+[node name="taskprompt" type="Control" parent="prompt"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="messagepanel" type="Panel" parent="prompt/taskprompt"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 48.0
+offset_top = 24.0
+offset_right = 1329.0
+offset_bottom = 822.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_8k1cl")
+theme_override_styles/panel = SubResource("StyleBoxFlat_jr4q0")
+
+[node name="closebtn" type="Button" parent="prompt/taskprompt/messagepanel"]
+layout_mode = 0
+offset_left = 1188.0
+offset_top = 23.0
+offset_right = 1292.0
+offset_bottom = 104.0
+theme = SubResource("Theme_2aejp")
+theme_override_font_sizes/font_size = 66
+theme_override_styles/normal = SubResource("StyleBoxFlat_1x68m")
+theme_override_styles/hover = SubResource("StyleBoxFlat_8jp2r")
+text = "X"
+script = ExtResource("1_mqutt")
+
+[node name="task" type="Label" parent="prompt/taskprompt/messagepanel"]
+layout_mode = 0
+offset_left = 250.0
+offset_top = 122.0
+offset_right = 1102.0
+offset_bottom = 254.0
+theme_override_font_sizes/font_size = 96
+text = "FIND THE ANSWER:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Question" type="Label" parent="prompt/taskprompt/messagepanel"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 366.0
+offset_right = 1318.0
+offset_bottom = 599.0
+theme_override_font_sizes/font_size = 96
+text = "The limit of sin(x)/x 
+as x approaches 0 equals?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="button_down" from="prompt/taskprompt/messagepanel/closebtn" to="prompt/taskprompt/messagepanel/closebtn" method="_on_button_down"]

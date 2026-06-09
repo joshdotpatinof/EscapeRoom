@@ -1,0 +1,153 @@
+[gd_scene load_steps=7 format=3 uid="uid://lhokkv8mb1fs"]
+
+[ext_resource type="Script" path="res://keypad_2.gd" id="1_hdoy5"]
+
+[sub_resource type="SystemFont" id="SystemFont_2xodv"]
+font_names = PackedStringArray("MS UI Gothic")
+
+[sub_resource type="Theme" id="Theme_43v1n"]
+Button/font_sizes/font_size = 32
+Button/fonts/font = SubResource("SystemFont_2xodv")
+
+[sub_resource type="SystemFont" id="SystemFont_sq7wd"]
+font_names = PackedStringArray("MS UI Gothic")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g2r5c"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="Theme" id="Theme_7n032"]
+Label/colors/font_color = Color(0, 0, 0, 1)
+Label/font_sizes/font_size = 50
+Label/fonts/font = SubResource("SystemFont_sq7wd")
+Label/styles/normal = SubResource("StyleBoxFlat_g2r5c")
+
+[node name="keypad2" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 32.0
+offset_top = 416.0
+offset_right = 32.0
+offset_bottom = 416.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_43v1n")
+script = ExtResource("1_hdoy5")
+
+[node name="Code_Display" type="Label" parent="."]
+layout_mode = 2
+offset_left = 448.0
+offset_top = 48.0
+offset_right = 848.0
+offset_bottom = 107.0
+theme = SubResource("Theme_7n032")
+text = "----"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="btn1" type="Button" parent="."]
+layout_mode = 2
+offset_left = 448.0
+offset_top = 128.0
+offset_right = 557.0
+offset_bottom = 183.0
+scale = Vector2(1.1738, 1.15597)
+text = "1"
+
+[node name="btn2" type="Button" parent="."]
+layout_mode = 2
+offset_left = 584.0
+offset_top = 128.0
+offset_right = 693.0
+offset_bottom = 184.0
+scale = Vector2(1.17634, 1.1429)
+text = "2"
+
+[node name="btn3" type="Button" parent="."]
+layout_mode = 2
+offset_left = 720.0
+offset_top = 128.0
+offset_right = 828.0
+offset_bottom = 184.0
+scale = Vector2(1.18212, 1.14114)
+text = "3"
+
+[node name="btn4" type="Button" parent="."]
+layout_mode = 2
+offset_left = 448.0
+offset_top = 200.0
+offset_right = 557.0
+offset_bottom = 256.0
+scale = Vector2(1.179, 1.14785)
+text = "4"
+
+[node name="btn5" type="Button" parent="."]
+layout_mode = 2
+offset_left = 584.0
+offset_top = 200.0
+offset_right = 692.0
+offset_bottom = 256.0
+scale = Vector2(1.18439, 1.15159)
+text = "5"
+
+[node name="btn6" type="Button" parent="."]
+layout_mode = 2
+offset_left = 720.0
+offset_top = 200.0
+offset_right = 827.0
+offset_bottom = 255.0
+scale = Vector2(1.19339, 1.16587)
+text = "6"
+
+[node name="btn7" type="Button" parent="."]
+layout_mode = 2
+offset_left = 448.0
+offset_top = 272.0
+offset_right = 576.0
+offset_bottom = 336.0
+text = "7"
+
+[node name="btn8" type="Button" parent="."]
+layout_mode = 2
+offset_left = 584.0
+offset_top = 272.0
+offset_right = 712.0
+offset_bottom = 336.0
+text = "8"
+
+[node name="btn9" type="Button" parent="."]
+layout_mode = 2
+offset_left = 720.0
+offset_top = 272.0
+offset_right = 848.0
+offset_bottom = 336.0
+text = "9"
+
+[node name="btnX" type="Button" parent="."]
+layout_mode = 2
+offset_left = 448.0
+offset_top = 344.0
+offset_right = 576.0
+offset_bottom = 408.0
+text = "X"
+
+[node name="btn0" type="Button" parent="."]
+layout_mode = 2
+offset_left = 584.0
+offset_top = 344.0
+offset_right = 712.0
+offset_bottom = 408.0
+text = "0"
+
+[node name="btnenter" type="Button" parent="."]
+layout_mode = 2
+offset_left = 720.0
+offset_top = 344.0
+offset_right = 848.0
+offset_bottom = 408.0
+text = "<"
