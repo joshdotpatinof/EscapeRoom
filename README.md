@@ -1,16 +1,16 @@
-# Escape Room: What's the Limit? 🧩☕
+# Escape Room: What's the Limit? 🧩☕ [Made in 2024]
 
-Welcome to **What's the Limit?**, an immersive escape room and puzzle game built using the **Godot Engine** (v4.2.2). Test your wits, solve math/logic-based puzzles, and find a way out of the room before time runs out!
+Welcome to **What's the Limit?**, an immersive escape room and puzzle game built using the **Godot Engine** (v4.2.2). Test your wits, solve math/logic-based puzzles, and find a way out of the room before time runs out! 
 
 ---
 
 ## 📸 Screenshots
 
 ### Title Screen
-![Title Screen](README_images/image_348ee7.png)
+![Title Screen](img1.png)
 
 ### The Scene
-![Game View](README_images/image_348ea3.png)
+![Game View](img2.png)
 
 ---
 
